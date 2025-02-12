@@ -11,7 +11,7 @@ function HomePage() {
       </div>
 
       <div className=''>
-        <div className='w-full flex items-center justify-center h-10 md:h-20  text-primary font-bold text-lg md:text-2xl'>
+        <div className='w-full flex items-center justify-center h-14 md:h-20  text-primary font-bold text-lg md:text-2xl'>
           <h2>FINE JEWELLERY</h2>
         </div>
         <BentoGrid/>
