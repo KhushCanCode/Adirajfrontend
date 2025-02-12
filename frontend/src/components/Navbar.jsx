@@ -30,7 +30,7 @@ function Navbar() {
       </nav>
 
       {/* Full Name Logo */}
-      <div className='bg-secondary hidden md:flex items-center justify-center py-2 '>
+      <div className='bg-secondary hidden md:flex items-center justify-center py-4 '>
         <img src={Logo2} alt="logo" className='w-26' />
       </div>
 
