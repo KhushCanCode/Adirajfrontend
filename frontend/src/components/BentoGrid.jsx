@@ -17,7 +17,7 @@ const BentoGrid = () => {
       <div className="bg-light p-10 md:p-6 lg:p-16 flex flex-col justify-center text-secondary order-2 md:order-3">
         <h2 className="text-2xl lg:text-4xl font-semibold ">GOLD</h2>
         <p className="mt-2 text-lg sm:text-xl md:text-xl lg:text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
-        <button className="mt-4 w-full sm:w-[60%] md:w-[50%] border border-secondary py-2 px-4 hover:bg-secondary hover:text-white cursor-pointer">Discover</button>
+        <button className="mt-4 w-full sm:w-[60%] md:w-[50%] border border-secondary py-2 px-4 hover:bg-secondary hover:text-gray-50 cursor-pointer">Discover</button>
       </div>
 
       {/* Jewelry Items */}
