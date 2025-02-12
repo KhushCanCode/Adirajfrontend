@@ -73,21 +73,21 @@ function RingSlider (){
 
             {/* Product Details Card - Appears on Hover */}
             {hoveredItem === item.id && (
-              <div className="absolute inset-0 bg-primary text-white rounded-md transition-opacity duration-300 cursor-pointer opacity-90 p-2 flex justify-center items-center">
+              <div className="absolute inset-0 bg-primary text-white rounded-md transition-opacity duration-600 cursor-pointer opacity-95 p-2 flex justify-center items-center">
                 <div className="border border-white h-full w-full flex flex-col items-center  justify-center">
                   <h3 className="text-2xl font-semibold">{item.name}</h3>
-                  <div className="flex items-center gap-14">
+                  <div className="flex items-center justify-between w-1/2">
                     <p>Size:</p>
                     <p className="text-sm">{item.size}</p>
                   </div>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center justify-between w-1/2">
                     <p>Price:</p>
                    <p className="text-lg font-bold">{item.price}</p>
                   </div>
-                  <div className="flex items-center gap-4 mt-2">
+                  <div className="flex items-center gap-4 mt-8">
                     
-                  <button className=" px-4 py-2 bg-white text-primary hover:bg-secondary hover:text-white transition duration-300  rounded-md cursor-pointer">Shop Now</button>
-                  <div className="bg-white text-primary p-2  rounded-full text-white">
+                  <button className=" px-4 py-2 bg-light text-primary hover:bg-secondary hover:text-white transition duration-300  rounded-md cursor-pointer">Shop Now</button>
+                  <div className="bg-light text-primary p-2 hover:bg-secondary hover:text-white  rounded-full text-white">
                      <Heart className=""/>
                     </div>
                   </div>
