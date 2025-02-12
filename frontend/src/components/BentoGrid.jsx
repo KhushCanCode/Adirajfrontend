@@ -7,7 +7,7 @@ import bentoImage6 from "../assets/bento-image6.jpg";
 
 const BentoGrid = () => {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-4 p-2 lg:p-4  ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-4 px-2 pt-2 lg:px-4 lg:pt-4  ">
       {/* High Jewelry */}
       <div className="col-span-1 md:col-span-1  order-1 md:order-none">
         <img src={bentoImage1} alt="High Jewelry" className="w-full h-full lg:h-full object-cover" />

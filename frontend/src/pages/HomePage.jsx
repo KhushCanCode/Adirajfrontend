@@ -14,7 +14,7 @@ function HomePage() {
 
       {/* BentoGrid Section */}
       <div className='bg-orange-50'>
-        <div className='w-full flex items-center justify-center h-14 md:h-20  text-primary font-bold text-base md:text-2xl'>
+        <div className='w-full flex items-center justify-center pt-4 h-14 md:h-20  text-primary font-bold text-base md:text-2xl'>
           <div className='flex items-center gap-4'>
             <Sparkles className='text-neutral size-4 md:size-6'/>
              <h2>FINE JEWELLERY</h2>
@@ -25,7 +25,7 @@ function HomePage() {
       </div>
 
       {/* New in Store Section */}
-      <div className='bg-white'>
+      <div className='bg-white py-2 md:py-4 '>
       <div className='w-full flex items-center justify-center h-14 md:h-20  text-primary font-bold text-base md:text-2xl '>
       <div className='flex items-center gap-4'>
             <Sparkles className='text-neutral size-4 md:size-6'/>
