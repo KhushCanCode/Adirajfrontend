@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <div>
       {/* Top Navigation */}
-      <nav className="bg-cherry text-white">
+      <nav className="bg-primary text-white">
         <div className="container mx-auto px-4 md:px-10 py-3 flex items-center justify-between">
 
           {/* Logo */}
@@ -22,20 +22,20 @@ function Navbar() {
           </div>
         
           {/* Right Icons */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 text-light">
             <ShoppingBag className="size-5 cursor-pointer" />
-            <User className="size-5 cursor-pointer hover:text-yellow-" />
+            <User className="size-5 cursor-pointer " />
           </div>
         </div>
       </nav>
 
       {/* Full Name Logo */}
-      <div className='bg-wine hidden md:flex items-center justify-center py-2 '>
-        <img src={Logo2} alt="" className='w-26' />
+      <div className='bg-secondary hidden md:flex items-center justify-center py-2 '>
+        <img src={Logo2} alt="logo" className='w-26' />
       </div>
 
         {/*Search Bar (Moves Below on Mobile) */}
-        <div className="bg-cherry flex items-center p-2 md:hidden">
+        <div className="bg-secondary flex items-center p-2 md:hidden">
           <SearchBar/>
         </div>
 

@@ -1,62 +1,69 @@
+
 @import "tailwindcss";
 
 @layer base {
   :root {
-    --color-sand: #f4d9b5;
-    --color-peach: #edc483;
-    --color-wine: #770523;
-    --color-cherry: #53131e;
-    --color-coal: #231919;
+    --color-light: #f4d9b5; 
+    --color-neutral: #edc483;
+    --color-secondary: #770523;
+    --color-primary: #53131e;
+    --color-dark: #231919;
   }
 }
 
 @layer utilities {
-  .bg-sand {
-    background-color: var(--color-sand);
+  .bg-light {
+    background-color: var(--color-light);
   }
-  .text-sand {
-    color: var(--color-sand);
+  .text-light {
+    color: var(--color-light);
   }
-  .bg-peach {
-    background-color: var(--color-peach);
+  .bg-neutral {
+    background-color: var(--color-neutral);
   }
-  .text-peach {
-    color: var(--color-peach);
+  .text-neutral {
+    color: var(--color-neutral);
   }
-  .bg-wine {
-    background-color: var(--color-wine);
+  .bg-secondary {
+    background-color: var(--color-secondary);
   }
-  .text-wine {
-    color: var(--color-wine);
+  .text-secondary {
+    color: var(--color-secondary);
   }
-  .bg-cherry {
-    background-color: var(--color-cherry);
+  .bg-primary {
+    background-color: var(--color-primary);
   }
-  .text-cherry {
-    color: var(--color-cherry);
+  .text-primary {
+    color: var(--color-primary);
   }
-  .bg-coal {
-    background-color: var(--color-coal);
+  .bg-dark {
+    background-color: var(--color-dark);
   }
-  .text-coal {
-    color: var(--color-coal);
+  .text-dark {
+    color: var(--color-dark);
   }
 
   /* ✅ Adding Hover States */
-  .hover\:bg-sand:hover {
-    background-color: var(--color-sand);
+  .hover\:bg-light:hover {
+    background-color: var(--color-light);
   }
-  .hover\:bg-peach:hover {
-    background-color: var(--color-peach);
+  .hover\:bg-neutral:hover {
+    background-color: var(--color-neutral);
   }
-  .hover\:bg-wine:hover {
-    background-color: var(--color-wine);
+  .hover\:bg-secondary:hover {
+    background-color: var(--color-secondary);
   }
-  .hover\:bg-cherry:hover {
-    background-color: var(--color-cherry);
+  .hover\:bg-primary:hover {
+    background-color: var(--color-primary);
   }
-  .hover\:bg-coal:hover {
-    background-color: var(--color-coal);
+  .hover\:bg-dark:hover {
+    background-color: var(--color-dark);
+  }
+  .hover\:text-dark:hover {
+    color: var(--color-dark);
   }
 }
 
+body{
+  font-family: 'Times New Roman', Times, serif;
+}
