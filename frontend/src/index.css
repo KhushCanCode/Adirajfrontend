@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-sand: #f4d9b5;
+    --color-peach: #edc483;
+    --color-wine: #770523;
+    --color-cherry: #53131e;
+    --color-coal: #231919;
+  }
+}
+
+@layer utilities {
+  .bg-sand {
+    background-color: var(--color-sand);
+  }
+  .text-sand {
+    color: var(--color-sand);
+  }
+  .bg-peach {
+    background-color: var(--color-peach);
+  }
+  .text-peach {
+    color: var(--color-peach);
+  }
+  .bg-wine {
+    background-color: var(--color-wine);
+  }
+  .text-wine {
+    color: var(--color-wine);
+  }
+  .bg-cherry {
+    background-color: var(--color-cherry);
+  }
+  .text-cherry {
+    color: var(--color-cherry);
+  }
+  .bg-coal {
+    background-color: var(--color-coal);
+  }
+  .text-coal {
+    color: var(--color-coal);
+  }
+
+  /* ✅ Adding Hover States */
+  .hover\:bg-sand:hover {
+    background-color: var(--color-sand);
+  }
+  .hover\:bg-peach:hover {
+    background-color: var(--color-peach);
+  }
+  .hover\:bg-wine:hover {
+    background-color: var(--color-wine);
+  }
+  .hover\:bg-cherry:hover {
+    background-color: var(--color-cherry);
+  }
+  .hover\:bg-coal:hover {
+    background-color: var(--color-coal);
+  }
+}
