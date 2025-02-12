@@ -42,7 +42,7 @@ function Navbar() {
       {/* Main Navigation */}
       <div className="border-b border-gray-300 shadow-sm">
         <div className="container mx-auto px-4">
-          <ul className="flex items-center lg:justify-center lg:space-x-8 gap-4 md:gap-8 lg:gap-0 py-2 md:py-4  overflow-x-auto whitespace-nowrap scrollbar-hide">
+          <ul className="flex items-center lg:justify-center lg:space-x-8 gap-4 md:gap-8 lg:gap-0 py-4  overflow-x-auto whitespace-nowrap scrollbar-hide">
             <li className="text-gray-700 hover:text-[#8B0000] cursor-pointer flex items-center gap-2 font-semibold"> Categories <ChevronDown size={20}/></li>
             <li className="text-gray-700 hover:text-[#8B0000] cursor-pointer text-sm md:text-base">GOLD</li>
             <li className="text-gray-700 hover:text-[#8B0000] cursor-pointer text-sm md:text-base">DIAMOND</li>
