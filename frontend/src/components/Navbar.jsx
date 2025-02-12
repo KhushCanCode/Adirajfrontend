@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <div>
       {/* Top Navigation */}
-      <nav className="bg-wine text-white">
+      <nav className="bg-cherry text-white">
         <div className="container mx-auto px-4 md:px-10 py-3 flex items-center justify-between">
 
           {/* Logo */}
@@ -35,7 +35,7 @@ function Navbar() {
       </div>
 
         {/*Search Bar (Moves Below on Mobile) */}
-        <div className="bg-wine flex items-center p-2 md:hidden">
+        <div className="bg-cherry flex items-center p-2 md:hidden">
           <SearchBar/>
         </div>
 
