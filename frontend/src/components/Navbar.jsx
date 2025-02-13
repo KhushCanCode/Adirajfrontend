@@ -23,7 +23,7 @@ function Navbar() {
 
         {/* Logo - Centered on Mobile */}
         <div className="flex justify-center items-center">
-          <img src={Logo2} alt="Adiraj" className="w-28 " />
+          <img src={Logo2} alt="Adiraj" className="w-32" />
         </div>
 
         {/* Icons - Hidden on Mobile, Visible on Desktop */}
