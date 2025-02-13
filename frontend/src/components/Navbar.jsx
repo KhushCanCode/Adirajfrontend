@@ -1,66 +1,83 @@
-import React from 'react'
-import { ArrowDown, Camera, ChevronDown, Heart, Mic, Search, ShoppingBag, User } from 'lucide-react'
-import Logo from "../assets/logo.png"
-import Logo2 from "../assets/logofull.png"
-import SearchBar from './SearchBar'
+import { useState } from "react";
+import { Heart, ShoppingBag, Menu, X, Search } from "lucide-react";
+import Logo2 from "../assets/logofull.png";
+import SearchBar from "./SearchBar";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div>
-      {/* Top Navigation */}
-      <nav className="bg-primary text-white">
-        <div className="container mx-auto px-4 md:px-10 py-3 flex items-center justify-between">
-
-          {/* Logo */}
-          <div className='size-8'>
-            <img src={Logo} alt="logo" />
-          </div>
-          
-          {/* Search Bar */}
-          <div className='hidden md:flex flex-1  max-w-2xl  md:mx-8 relative'>
-          <SearchBar className="hidden md:flex"/>
-          </div>
+    <header className="fixed top-0 w-full z-50 bg-secondary shadow-md h-28 md:h-32">
+      
+      {/* Top Bar */}
+      <div className="grid grid-cols-3 px-4 lg:px-8 w-full  py-3 ">
         
-          {/* Right Icons */}
-          <div className="flex items-center space-x-4 text-light">
-            <Heart className="size-5 cursor-pointer hover:text-neutral" />
-            <ShoppingBag className="size-5 cursor-pointer hover:text-neutral" />
-            <button className='bg-light text-primary py-1 px-2 rounded-full hover:bg-neutral cursor-pointer'>Login / Register</button>
-          </div>
+        <div className="items-center hidden md:flex">
+          <SearchBar />
         </div>
-      </nav>
+       
+        {/* Hamburger Menu - Visible on Mobile */}
+        <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <X size={24} className="text-light" /> : <Menu size={24} className="text-light" />}
+        </button>
 
-      {/* Full Name Logo */}
-      <div className='bg-secondary hidden md:flex items-center justify-center py-4 '>
-        <img src={Logo2} alt="logo" className='w-26' />
+        {/* Logo - Centered on Mobile */}
+        <div className="flex justify-center items-center">
+          <img src={Logo2} alt="Adiraj" className="w-28 " />
+        </div>
+
+        {/* Icons - Hidden on Mobile, Visible on Desktop */}
+        <div className="hidden md:flex items-center justify-end space-x-4 text-gray-700">
+          
+          <Heart className="cursor-pointer text-light size-5" />
+          <ShoppingBag className="cursor-pointer text-light size-5" />
+          <button className="bg-secondary text-light border border-light py-1 px-2 rounded-md hover:bg-white hover:text-secondary cursor-pointer">
+            Login / Register
+          </button>
+        </div>
+
       </div>
 
-        {/*Search Bar (Moves Below on Mobile) */}
-        <div className="bg-secondary flex flex-col items-center p-2 md:hidden gap-2">
-        <img src={Logo2} alt="logo" className='w-26' />
-          <SearchBar/>
-        </div>
+      {/* Mobile Menu - Shows Search, Wishlist, Shopping Bag, and Login/Register */}
+      {menuOpen && (
+        <nav className="bg-white md:hidden absolute top-full left-0 w-full shadow-lg">
+          <ul className="flex flex-col items-start gap-4 py-4 px-6">
+            <li className="flex items-center gap-2 cursor-pointer text-gray-700 hover:text-secondary">
+              <Search size={20} /> Search
+            </li>
+            <li className="flex items-center gap-2 cursor-pointer text-gray-700 hover:text-secondary">
+              <Heart size={20} /> Wishlist
+            </li>
+            <li className="flex items-center gap-2 cursor-pointer text-gray-700 hover:text-secondary">
+              <ShoppingBag size={20} /> Shopping Bag
+            </li>
+            <li>
+              <button className="bg-secondary text-light py-2 px-4 w-full rounded-md hover:bg-white hover:text-secondary cursor-pointer">
+                Login / Register
+              </button>
+            </li>
+          </ul>
+        </nav>
+      )}
 
-      {/* Main Navigation */}
-      <div className="border-b border-gray-300 shadow-sm">
+      {/* Desktop Navigation Menu - Always Visible */}
+      <nav className="bg-white">
         <div className="container mx-auto px-4">
-          <ul className="flex items-center lg:justify-center lg:space-x-8 gap-4 md:gap-8 lg:gap-0 py-4  overflow-x-auto whitespace-nowrap scrollbar-hide">
-            <li className="text-gray-700 hover:text-[#8B0000] cursor-pointer flex items-center gap-2 font-semibold">CATEGORIES <ChevronDown size={20}/></li>
-            <li className="text-gray-700 hover:text-[#8B0000] cursor-pointer text-sm md:text-base">GOLD</li>
-            <li className="text-gray-700 hover:text-[#8B0000] cursor-pointer text-sm md:text-base">DIAMOND</li>
-            <li className="text-gray-700 hover:text-[#8B0000] cursor-pointer text-sm md:text-base">EARRINGS</li>
-            <li className="text-gray-700 hover:text-[#8B0000] cursor-pointer text-sm md:text-base">RINGS</li>
-            <li className="text-gray-700 hover:text-[#8B0000] cursor-pointer text-sm md:text-base">VALENTINE</li>
-            <li className="text-gray-700 hover:text-[#8B0000] cursor-pointer text-sm md:text-base">COLLECTIONS</li>
-            <li className="text-gray-700 hover:text-[#8B0000] cursor-pointer text-sm md:text-base">WEDDING</li>
-            <li className="text-gray-700 hover:text-[#8B0000] cursor-pointer text-sm md:text-base">MORE</li>
+          <ul className="flex items-center lg:justify-center lg:space-x-8 gap-4 md:gap-8 lg:gap-0 py-4 overflow-x-auto whitespace-nowrap scrollbar-hide">
+            <li className="text-gray-700 hover:text-secondary cursor-pointer font-semibold text-sm md:text-base">CATEGORIES</li>
+            <li className="text-gray-700 hover:text-secondary cursor-pointer text-sm md:text-base">GOLD</li>
+            <li className="text-gray-700 hover:text-secondary cursor-pointer text-sm md:text-base">DIAMOND</li>
+            <li className="text-gray-700 hover:text-secondary cursor-pointer text-sm md:text-base">EARRINGS</li>
+            <li className="text-gray-700 hover:text-secondary cursor-pointer text-sm md:text-base">RINGS</li>
+            <li className="text-gray-700 hover:text-secondary cursor-pointer text-sm md:text-base">VALENTINE</li>
+            <li className="text-gray-700 hover:text-secondary cursor-pointer text-sm md:text-base">COLLECTIONS</li>
+            <li className="text-gray-700 hover:text-secondary cursor-pointer text-sm md:text-base">WEDDING</li>
+            <li className="text-gray-700 hover:text-secondary cursor-pointer text-sm md:text-base">MORE</li>
           </ul>
         </div>
-      </div>
-
-
-    </div>
-  )
+      </nav>
+    </header>
+  );
 }
 
-export default Navbar
+export default Navbar;  

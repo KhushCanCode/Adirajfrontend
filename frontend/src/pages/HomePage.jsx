@@ -8,16 +8,16 @@ function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <div className=''>
+      <div className='mt-28 md:mt-32 '>
         <HeroSlider/>
       </div>
 
       {/* BentoGrid Section */}
-      <div className='bg-orange-50'>
+      <div className='bg-orange-50 font-serif'>
         <div className='w-full flex items-center justify-center pt-4 h-14 md:h-20  text-primary font-bold text-base md:text-2xl'>
           <div className='flex items-center gap-4'>
             <Sparkles className='text-neutral size-4 md:size-6'/>
-             <h2>FINE JEWELLERY</h2>
+             <h2 className=''>FINE JEWELLERY</h2>
             <Sparkles className='text-neutral size-4 md:size-6'/>
           </div>
         </div>
@@ -29,7 +29,7 @@ function HomePage() {
       <div className='w-full flex items-center justify-center h-14 md:h-20  text-primary font-bold text-base md:text-2xl '>
       <div className='flex items-center gap-4'>
             <Sparkles className='text-neutral size-4 md:size-6'/>
-             <h2>NEW IN STORE</h2>
+             <h2 className='font-serif'>NEW IN TRENDS</h2>
             <Sparkles className='text-neutral size-4 md:size-6'/>
           </div>
       </div>

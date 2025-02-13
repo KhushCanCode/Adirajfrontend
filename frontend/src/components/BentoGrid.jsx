@@ -15,7 +15,7 @@ const BentoGrid = () => {
 
             {/* Gold Text Box */}
             <div className="bg-light p-10 md:p-6 lg:p-16 flex flex-col justify-center text-secondary order-2 md:order-3">
-                <h2 className="text-2xl lg:text-4xl font-semibold">GOLD</h2>
+                <h2 className="text-2xl lg:text-4xl font-semibold font-serif">GOLD</h2>
                 <p className="mt-2 text-lg sm:text-xl md:text-xl lg:text-2xl">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
                 </p>
@@ -35,7 +35,7 @@ const BentoGrid = () => {
 
             {/* Diamonds Text Box */}
             <div className="bg-dark p-10 md:p-6 lg:p-16 flex flex-col justify-center text-light order-4 h-auto md:order-4">
-                <h2 className="text-2xl lg:text-4xl font-semibold">DIAMONDS</h2>
+                <h2 className="text-2xl lg:text-4xl font-semibold font-serif">DIAMONDS</h2>
                 <p className="mt-2 text-lg md:text-xl lg:text-2xl">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
                 </p>
