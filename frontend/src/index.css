@@ -59,6 +59,19 @@
   .hover\:bg-dark:hover {
     background-color: var(--color-dark);
   }
+
+  .hover\:text-light:hover {
+    color: var(--color-light);
+  }
+  .hover\:text-neutral:hover {
+    color: var(--color-neutral);
+  }
+  .hover\:text-secondary:hover {
+    color: var(--color-secondary);
+  }
+  .hover\:text-primary:hover {
+    color: var(--color-primary);
+  }
   .hover\:text-dark:hover {
     color: var(--color-dark);
   }

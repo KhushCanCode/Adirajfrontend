@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowDown, Camera, ChevronDown, Mic, Search, ShoppingBag, User } from 'lucide-react'
+import { ArrowDown, Camera, ChevronDown, Heart, Mic, Search, ShoppingBag, User } from 'lucide-react'
 import Logo from "../assets/logo.png"
 import Logo2 from "../assets/logofull.png"
 import SearchBar from './SearchBar'
@@ -17,14 +17,15 @@ function Navbar() {
           </div>
           
           {/* Search Bar */}
-          <div className='hidden md:flex flex-1 max-w-2xl md:mx-8 relative'>
-            <SearchBar/>
+          <div className='hidden md:flex flex-1  max-w-2xl  md:mx-8 relative'>
+          <SearchBar className="hidden md:flex"/>
           </div>
         
           {/* Right Icons */}
           <div className="flex items-center space-x-4 text-light">
-            <ShoppingBag className="size-5 cursor-pointer" />
-            <User className="size-5 cursor-pointer " />
+            <Heart className="size-5 cursor-pointer hover:text-neutral" />
+            <ShoppingBag className="size-5 cursor-pointer hover:text-neutral" />
+            <button className='bg-light text-primary py-1 px-2 rounded-full hover:bg-neutral cursor-pointer'>Login / Register</button>
           </div>
         </div>
       </nav>
@@ -35,7 +36,8 @@ function Navbar() {
       </div>
 
         {/*Search Bar (Moves Below on Mobile) */}
-        <div className="bg-secondary flex items-center p-2 md:hidden">
+        <div className="bg-secondary flex flex-col items-center p-2 md:hidden gap-2">
+        <img src={Logo2} alt="logo" className='w-26' />
           <SearchBar/>
         </div>
 
