@@ -3,7 +3,6 @@ import HeroSlider from '../components/HeroSlider'
 import BentoGrid from '../components/BentoGrid'
 import RingSlider from '../components/RingSlider'
 import { Sparkles } from 'lucide-react'
-import useGsapReveal from '../components/animation/useGSAPReveal'
 
 function HomePage() {
   return (

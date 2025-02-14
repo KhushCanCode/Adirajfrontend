@@ -4,14 +4,11 @@ import { Heart, ShoppingBag, Menu, X, Search, ChevronDown } from "lucide-react";
 import Logo2 from "../assets/logofull.png";
 import SearchBar from "./SearchBar";
 import DropDownMenu from "./DropDownMenu";
-import useGsapReveal from "./animation/useGSAPReveal";
-import useGsapLoadAnimation from '../components/animation/useGSAPLoadAnimation'
 
 function Navbar() {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  useGsapLoadAnimation()
  
   return (
     <header className="fixed top-0 w-full z-40 bg-secondary shadow-lg h-28 md:h-32  " data-load-animation="fade-down" >
