@@ -11,7 +11,7 @@ function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 w-full z-40 bg-secondary shadow-lg h-28 md:h-32">
+    <header className="fixed top-0 w-full z-40 bg-secondary shadow-lg h-28 md:h-32 ">
       
       {/* Top Bar */}
       <div className="grid grid-cols-3 px-4 lg:px-8 w-full  py-3 ">

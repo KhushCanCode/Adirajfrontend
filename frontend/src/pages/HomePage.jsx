@@ -8,7 +8,7 @@ function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <div className='mt-28 md:mt-36'>
+      <div className='mt-32 md:mt-36'>
         <HeroSlider/>
       </div>
 

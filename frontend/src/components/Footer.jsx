@@ -3,15 +3,16 @@ import Logo2 from "../assets/logofull.png";
 
 function Footer() {
   return (
-    <div className='relative h-[490px] md:h-[270px] lg:h-[252px]'
+    <div className='relative h-[470px] sm:h-[420px] md:h-[350px] lg:h-[350px]'
     style={{clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%'}}>
-        <div className='fixed h-[490px] md:h-[270px] lg:h-[252px] w-full bg-primary bottom-0 '>
-            <footer className="bg-dark  text-neutral-400">
-            <div className=" grid mx-auto max-w-7xl gird-rows-2 grid-cols-2 md:grid-rows-1 md:grid-cols-4 lg:grid-cols-5 gap-10 px-4 pt-10 ">
+        <div className='fixed h-[470px] sm:h-[420px] md:h-[350px] lg:h-[350px] w-full bg-primary bottom-0 '>
+            <footer className="bg-dark h-[470px] md:h-[350px] sm:h-[420px] lg:h-[350px] text-neutral-400 ">
 
-                <div className='hidden lg:flex justify-start items-center'>  
-                    <img src={Logo2} alt="logo" className='w-48 h-24' />
-                </div>
+            <div className=' justify-center items-center w-[100%] py-4 flex '>  
+                    <img src={Logo2} alt="logo" className='w-30 md:w-48 md:h-24 ' />
+            </div>
+
+            <div className="  mx-auto max-w-7xl grid grid-cols-2 grid-rows-2 md:grid-cols-4 gap-6 py-4 md:px-20 px-8 ">
 
                 {/* Info Section */}
                 <div className=' '>
@@ -56,11 +57,11 @@ function Footer() {
                     </ul>
                 </div>
             </div>
-            <div>
-                <p className="text-sm p-2 flex items-center justify-center bg-primary w-full mt-10 text-red-300">
+            {/* <div>
+                <p className="text-sm p-2 flex items-center justify-center bg-dark w-full mt-10 text-red-300">
                 © 2024 Adiraj. All Rights Reserved.
                 </p>
-            </div>
+            </div> */}
             </footer>
             
         </div>

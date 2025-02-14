@@ -13,7 +13,7 @@ const categories = [
 
 function DropDownMenu() {
   return (
-    <div className="absolute top-36 left-0 z-50 w-full bg-white shadow-lg  p-2 flex items-center gap-4 ">
+    <div className="absolute top-32 md:top-36 left-0 z-50 w-full bg-white shadow-lg  p-2 flex items-center gap-4 ">
       {categories.map((category) => (
         <div key={category.id} className="flex flex-col items-center p-2 hover:bg-gray-100 rounded-md cursor-pointer">
           <img src={category.image} alt={category.name} className="w-40 h-40 object-cover rounded-md" />
