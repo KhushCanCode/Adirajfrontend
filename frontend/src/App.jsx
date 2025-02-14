@@ -15,6 +15,7 @@ import ItemPage from './pages/ItemPage';
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
+      lerp: 0.08,
       duration: 1.2, // Adjust scrolling speed
       smooth: true, 
     });

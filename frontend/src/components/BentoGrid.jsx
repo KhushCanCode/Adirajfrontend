@@ -4,19 +4,21 @@ import bentoImage3 from "../assets/bento-image3.jpg";
 import bentoImage4 from "../assets/bento-image4.jpg";
 import bentoImage5 from "../assets/bento-image5.jpg";
 import bentoImage6 from "../assets/bento-image6.jpg";
+import useGsapReveal from "./animation/useGSAPReveal";
 
 const BentoGrid = () => {
+    useGsapReveal();
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-4 px-2 pt-2 lg:px-4 lg:pt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-4 px-2 pt-2 lg:px-4 lg:pt-4 overflow-hidden">
             {/* High Jewelry */}
-            <div className="col-span-1 md:col-span-1 order-1 md:order-none">
+            <div className="col-span-1 md:col-span-1 order-1 md:order-none " data-animation="fade-left">
                 <img src={bentoImage1} alt="High Jewelry" className="w-full h-full lg:h-full object-cover" />
             </div>
 
             {/* Gold Text Box */}
-            <div className="bg-light p-10 md:p-6 lg:p-16 flex flex-col justify-center text-secondary order-2 md:order-3">
-                <h2 className="text-2xl lg:text-4xl font-semibold font-serif">GOLD</h2>
-                <p className="mt-2 text-lg sm:text-xl md:text-xl lg:text-2xl">
+            <div className="bg-light p-10 md:p-6 lg:p-16 flex flex-col justify-center text-secondary order-2 md:order-3" data-animation="fade-right">
+                <h2 className="text-2xl lg:text-4xl font-semibold font-serif ">GOLD</h2>
+                <p className="mt-2 text-lg sm:text-xl md:text-xl lg:text-2xl ">
                 Crafted with precision and purity, each piece is designed to celebrate your 
                 unique style and special moments.
                 </p>
@@ -29,15 +31,15 @@ const BentoGrid = () => {
             <div className="grid grid-cols-2 gap-2 md:gap-1 lg:gap-4 order-3 md:order-2">
                 {[bentoImage2, bentoImage3, bentoImage4, bentoImage5].map((img, index) => (
                     <div key={index} className="h-full w-full">
-                        <img src={img} alt="Jewelry Item" className="w-full h-full object-cover" />
+                        <img src={img} alt="Jewelry Item" className="w-full h-full object-cover " data-animation="zoom-out" />
                     </div>
                 ))}
             </div>
 
             {/* Diamonds Text Box */}
-            <div className="bg-dark p-10 md:p-6 lg:p-16 flex flex-col justify-center text-light order-4 h-auto md:order-4">
-                <h2 className="text-2xl lg:text-4xl font-semibold font-serif">DIAMONDS</h2>
-                <p className="mt-2 text-lg md:text-xl lg:text-2xl">
+            <div className="bg-dark p-10 md:p-6 lg:p-16 flex flex-col justify-center text-light order-4 h-auto md:order-4 " data-animation="fade-left">
+                <h2 className="text-2xl lg:text-4xl font-semibold font-serif ">DIAMONDS</h2>
+                <p className="mt-2 text-lg md:text-xl lg:text-2xl ">
                 Each piece is a masterpiece of brilliance, precision, and timeless beauty, 
                 designed to add a touch of sparkle to your most cherished moments.
                 </p>
@@ -47,7 +49,7 @@ const BentoGrid = () => {
             </div>
 
             {/* Fashion Image */}
-            <div className="col-span-1 sm:col-span-2 order-5 md:order-5">
+            <div className="col-span-1 sm:col-span-2 order-5 md:order-5 reveal-animation" data-animation="fade-right">
                 <img src={bentoImage6} alt="Fashion Look" className="w-full h-auto sm:h-3/4 md:h-full object-cover" />
             </div>
         </div>
