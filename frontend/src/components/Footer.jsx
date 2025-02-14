@@ -12,7 +12,7 @@ function Footer() {
                     <img src={Logo2} alt="logo" className='w-30 md:w-48 md:h-24 ' />
             </div>
 
-            <div className="  mx-auto max-w-7xl grid grid-cols-2 grid-rows-2 md:grid-cols-4 gap-6 py-4 md:px-20 px-8 ">
+            <div className="  mx-auto max-w-7xl grid grid-cols-2 grid-rows-2 md:grid-cols-4 gap-6 py-4 md:px-20 px-8 md:place-items-center ">
 
                 {/* Info Section */}
                 <div className=' '>
@@ -54,6 +54,7 @@ function Footer() {
                     <li><a href="#" className="hover:underline">Instagram</a></li>
                     <li><a href="#" className="hover:underline">Pinterest</a></li>
                     <li><a href="#" className="hover:underline">TikTok</a></li>
+                    <li><a href="#" className="hover:underline">Youtube</a></li>
                     </ul>
                 </div>
             </div>

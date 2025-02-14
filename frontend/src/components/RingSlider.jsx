@@ -24,6 +24,7 @@ const jewelleryItems = [
 function RingSlider (){
   const sliderRef = useRef(null);
   const [hoveredItem, setHoveredItem] = useState(null);
+  const navigate = useNavigate()
 
   const settings = {
     infinite: true,
@@ -98,7 +99,8 @@ function RingSlider (){
                   
                   <div className="flex items-center gap-4 mt-8">
                     
-                  <button className=" px-4 py-2 bg-light text-primary hover:bg-secondary hover:text-gray-50 transition duration-300  rounded-md cursor-pointer border border-light">Try it Out</button>
+                  <button className=" px-4 py-2 bg-light text-primary hover:bg-secondary hover:text-gray-50 transition duration-300  rounded-md cursor-pointer border border-light"
+                  onClick={()=>navigate("/item")}>Try it Out</button>
                   <div className="bg-light text-primary p-2 hover:bg-secondary hover:text-gray-50  rounded-full text-white border border-light">
                      <Heart className=""/>
                     </div>
