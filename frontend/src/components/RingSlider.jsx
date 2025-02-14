@@ -11,14 +11,14 @@ import { ArrowUpRightFromSquare, Heart, MoveLeft, MoveRight } from "lucide-react
 
 
 const jewelleryItems = [
-  { id: 1, image: bentoImage2, alt: "Image 2" ,name: "Engagement Ring", price: "$2000", size: "S"},
-  { id: 2, image: bentoImage3, alt: "Image 3" ,name: "Engagement Ring", price: "$2000", size: "M"},
-  { id: 3, image: bentoImage4, alt: "Image 4" ,name: "Engagement Ring", price: "$2000", size: "L"},
-  { id: 4, image: bentoImage5, alt: "Image 5" ,name: "Engagement Ring", price: "$2000", size: "S"},
-  { id: 5, image: bentoImage3, alt: "Image 3" ,name: "Engagement Ring", price: "$2000", size: "M"},
-  { id: 6, image: bentoImage2, alt: "Image 2" ,name: "Engagement Ring", price: "$2000", size: "L"},
-  { id: 7, image: bentoImage5, alt: "Image 5" ,name: "Engagement Ring", price: "$2000", size: "S"},
-  { id: 8, image: bentoImage4, alt: "Image 4" ,name: "Engagement Ring", price: "$2000", size: "S"},
+  { id: 1, image: bentoImage2, alt: "Image 2" ,name: "Engagement Ring", carret: "24K", weight:"6.5g", rent:"15000/15days",  price: "$2000", size: "S"},
+  { id: 2, image: bentoImage3, alt: "Image 3" ,name: "Stud Ring", carret: "12K", weight:"6g", rent:"15000/15days",  price: "$2000", size: "M"},
+  { id: 3, image: bentoImage4, alt: "Image 4" ,name: "Wedgie Ring", carret: "9K", weight:"7.5g", rent:"20000/15days",  price: "$2000", size: "L"},
+  { id: 4, image: bentoImage5, alt: "Image 5" ,name: "Round Bottom Earrings", carret: "14K", weight:"2.3g", rent:"7000/15days",  price: "$2000", size: "S"},
+  { id: 5, image: bentoImage3, alt: "Image 3" ,name: "Engagement Ring", carret: "18K", weight:"5.5g", rent:"14000/15days",  price: "$2000", size: "M"},
+  { id: 6, image: bentoImage2, alt: "Image 2" ,name: "Engagement Ring", carret: "22K", weight:"3.3g", rent:"4000/15days",  price: "$2000", size: "L"},
+  { id: 7, image: bentoImage5, alt: "Image 5" ,name: "Engagement Ring", carret: "24K", weight:"7.8g", rent:"60000/15days",  price: "$2000", size: "S"},
+  { id: 8, image: bentoImage4, alt: "Image 4" ,name: "Engagement Ring", carret: "24K", weight:"3g", rent:"4000/15days",  price: "$2000", size: "S"},
 ];
 
 function RingSlider (){
@@ -32,6 +32,8 @@ function RingSlider (){
     slidesToScroll: 1,
     accessibility: true, // Ensures better focus management
     arrows:false,
+    autoplay: true, // Enables auto sliding
+    autoplaySpeed: 3000, // Moves to the next slide every 3 seconds
     responsive: [
       {
         breakpoint: 1024, // Tablets
@@ -81,12 +83,22 @@ function RingSlider (){
                     <p className="text-sm">{item.size}</p>
                   </div>
                   <div className="flex items-center justify-between w-1/2">
-                    <p>Price:</p>
-                   <p className="text-lg font-bold">{item.price}</p>
+                    <p>Purity:</p>
+                    <p className="text-sm">{item.carret}</p>
                   </div>
+                  <div className="flex items-center justify-between w-1/2">
+                    <p>Weight:</p>
+                    <p className="text-sm">{item.weight}</p>
+                  </div>
+                  <div className="flex items-center justify-between w-1/2">
+                    <p>Rent:</p>
+                    <p className="text-sm">&#8377;{item.rent}</p>
+                  </div>
+                  
+                  
                   <div className="flex items-center gap-4 mt-8">
                     
-                  <button className=" px-4 py-2 bg-light text-primary hover:bg-secondary hover:text-gray-50 transition duration-300  rounded-md cursor-pointer border border-light">Shop Now</button>
+                  <button className=" px-4 py-2 bg-light text-primary hover:bg-secondary hover:text-gray-50 transition duration-300  rounded-md cursor-pointer border border-light">Try it Out</button>
                   <div className="bg-light text-primary p-2 hover:bg-secondary hover:text-gray-50  rounded-full text-white border border-light">
                      <Heart className=""/>
                     </div>

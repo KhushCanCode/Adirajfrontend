@@ -10,7 +10,7 @@ import HeroImage4 from "../assets/hero-image4.png"
 function HeroSlider() {
     return(
         <div className="">
-        <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} autoPlay={true} interval={5000} transitionTime={1000} showArrows={false}>
+        <Carousel showThumbs={false} showStatus={false} infiniteLoop={true} autoPlay={true} interval={4000} transitionTime={1000} showArrows={false}>
             <div>
                 <img src={HeroImage1} alt="hero-image1" />
             </div>

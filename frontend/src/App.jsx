@@ -9,6 +9,7 @@ import AboutPage from './pages/AboutPage';
 import ProfilePage from './pages/ProfilePage';
 import ContactPage from './pages/ContactPage';
 import Lenis from '@studio-freight/lenis';
+import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
@@ -40,6 +41,7 @@ function App() {
         <Route path='/profile' element={<ProfilePage />} />
         <Route path='/contact' element={<ContactPage />} />
       </Routes>
+      <Footer/>
       <Toaster />
     </div>
   );

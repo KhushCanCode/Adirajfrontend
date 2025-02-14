@@ -17,7 +17,8 @@ const BentoGrid = () => {
             <div className="bg-light p-10 md:p-6 lg:p-16 flex flex-col justify-center text-secondary order-2 md:order-3">
                 <h2 className="text-2xl lg:text-4xl font-semibold font-serif">GOLD</h2>
                 <p className="mt-2 text-lg sm:text-xl md:text-xl lg:text-2xl">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
+                Crafted with precision and purity, each piece is designed to celebrate your 
+                unique style and special moments.
                 </p>
                 <button className="mt-4 w-full sm:w-[60%] md:w-[50%] border border-secondary py-2 px-4 hover:bg-secondary hover:text-gray-50 cursor-pointer">
                     Discover
@@ -37,7 +38,8 @@ const BentoGrid = () => {
             <div className="bg-dark p-10 md:p-6 lg:p-16 flex flex-col justify-center text-light order-4 h-auto md:order-4">
                 <h2 className="text-2xl lg:text-4xl font-semibold font-serif">DIAMONDS</h2>
                 <p className="mt-2 text-lg md:text-xl lg:text-2xl">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
+                Each piece is a masterpiece of brilliance, precision, and timeless beauty, 
+                designed to add a touch of sparkle to your most cherished moments.
                 </p>
                 <button className="mt-4 w-full sm:w-[60%] md:w-[50%] border border-secondary py-2 px-4 hover:bg-light hover:text-dark cursor-pointer">
                     Discover
