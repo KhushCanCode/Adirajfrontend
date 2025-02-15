@@ -55,11 +55,17 @@ function Navbar() {
               <Search size={20} /> Search
             </li>
             <li className="flex items-center gap-2 cursor-pointer text-gray-700 hover:text-secondary"
-            onClick={() => setMenuOpen(false)}>
+            onClick={() => {
+              setMenuOpen(false);
+              navigate("/profile");
+            }}>
               <Heart size={20} /> Wishlist
             </li>
             <li className="flex items-center gap-2 cursor-pointer text-gray-700 hover:text-secondary"
-            onClick={() => setMenuOpen(false)}>
+            onClick={() => {
+              setMenuOpen(false);
+              navigate("/profile");
+            }}>
               <ShoppingBag size={20} /> Shopping Bag
             </li>
             <li>
