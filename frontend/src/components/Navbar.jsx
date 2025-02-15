@@ -60,7 +60,8 @@ function Navbar() {
               <ShoppingBag size={20} /> Shopping Bag
             </li>
             <li>
-              <button className="bg-secondary text-light py-2 px-4 w-full rounded-md hover:bg-white hover:text-secondary cursor-pointer">
+              <button className="bg-secondary text-light py-2 px-4 w-full rounded-md hover:bg-white hover:text-secondary cursor-pointer"
+              onClick={() => navigate("/login")}>
                 Login / Register
               </button>
             </li>
