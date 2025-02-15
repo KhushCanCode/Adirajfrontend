@@ -8,6 +8,7 @@ import bentoImage3 from "../assets/bento-image3.jpg";
 import bentoImage4 from "../assets/bento-image4.jpg";
 import bentoImage5 from "../assets/bento-image5.jpg";
 import { ArrowUpRightFromSquare, Heart, MoveLeft, MoveRight } from "lucide-react";
+import useGsapReveal from "./animation/useGSAPReveal";
 
 
 const jewelleryItems = [
@@ -22,13 +23,12 @@ const jewelleryItems = [
 ];
 
 function RingSlider (){
+  useGsapReveal();
   const sliderRef = useRef(null);
   const [hoveredItem, setHoveredItem] = useState(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+
 
   const settings = {
     infinite: true,
@@ -62,8 +62,8 @@ function RingSlider (){
   };
 
   return (
-    <div className="container mx-auto px-4">
-     <Slider ref={sliderRef} {...settings}>
+    <div className="container mx-auto px-4 " data-animation="fade-right">
+     <Slider ref={sliderRef} {...settings} >
         {jewelleryItems.map((item) => (
           <div
             key={item.id}
@@ -75,13 +75,13 @@ function RingSlider (){
             <img
               src={item.image}
               alt={item.alt}
-              className="w-full h-auto object-cover rounded-md transition-transform duration-300 group-hover:scale-105 cursor-pointer"
+              className="w-full h-auto object-cover rounded-md transition-transform duration-300 group-hover:scale-105 "
             />
 
             {/* Product Details Card - Appears on Hover */}
             {hoveredItem === item.id && (
-              <div className="absolute inset-0 bg-primary text-white rounded-md transition-opacity duration-600 cursor-pointer opacity-95 p-2 flex justify-center items-center">
-                <div className="border border-white h-full w-full flex flex-col items-center  justify-center">
+              <div className="absolute inset-0 bg-primary text-light rounded-md transition-opacity duration-600 cursor-grab opacity-95 p-2 flex justify-center items-center">
+                <div className="border border-light h-full w-full flex flex-col items-center  justify-center">
                   <h3 className="text-2xl font-semibold">{item.name}</h3>
                   <div className="flex items-center justify-between w-1/2">
                     <p>Size:</p>
@@ -103,9 +103,9 @@ function RingSlider (){
                   
                   <div className="flex items-center gap-4 mt-8">
                     
-                  <Link to="/item" className=" px-4 py-2 bg-light text-primary hover:bg-secondary hover:text-gray-50 transition duration-300  rounded-md cursor-pointer border border-light"
+                  <Link to="/item" className=" px-4 py-2 bg-light text-primary hover:bg-secondary hover:text-light transition duration-300  rounded-md cursor-pointer border border-light"
                   >See Details</Link>
-                  <div className="bg-light text-primary p-2 hover:bg-secondary hover:text-gray-50  rounded-full text-white border border-light">
+                  <div className="bg-light text-primary p-2 hover:bg-secondary hover:text-light  rounded-full text-light border border-light">
                      <Heart className=""/>
                     </div>
                   </div>

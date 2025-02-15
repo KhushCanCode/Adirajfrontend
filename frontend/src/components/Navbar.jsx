@@ -50,18 +50,24 @@ function Navbar() {
       {menuOpen && (
         <nav className="bg-white md:hidden absolute top-full left-0 w-full shadow-lg">
           <ul className="flex flex-col items-start gap-4 py-4 px-6">
-            <li className="flex items-center gap-2 cursor-pointer text-gray-700 hover:text-secondary">
+            <li className="flex items-center gap-2 cursor-pointer text-gray-700 hover:text-secondary"
+            onClick={() => setMenuOpen(false)}>
               <Search size={20} /> Search
             </li>
-            <li className="flex items-center gap-2 cursor-pointer text-gray-700 hover:text-secondary">
+            <li className="flex items-center gap-2 cursor-pointer text-gray-700 hover:text-secondary"
+            onClick={() => setMenuOpen(false)}>
               <Heart size={20} /> Wishlist
             </li>
-            <li className="flex items-center gap-2 cursor-pointer text-gray-700 hover:text-secondary">
+            <li className="flex items-center gap-2 cursor-pointer text-gray-700 hover:text-secondary"
+            onClick={() => setMenuOpen(false)}>
               <ShoppingBag size={20} /> Shopping Bag
             </li>
             <li>
-              <button className="bg-secondary text-light py-2 px-4 w-full rounded-md hover:bg-white hover:text-secondary cursor-pointer"
-              onClick={() => navigate("/login")}>
+              <button className="bg-secondary text-light py-2 px-4 w-full rounded-md hover:bg-light hover:text-secondary cursor-pointer"
+              onClick={() => {
+                setMenuOpen(false);
+                navigate("/login");
+              }}>
                 Login / Register
               </button>
             </li>

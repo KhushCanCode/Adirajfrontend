@@ -4,7 +4,6 @@ import { Carousel } from 'react-responsive-carousel';
 import HeroImage1 from "../assets/hero-image1.png"
 import HeroImage2 from "../assets/hero-image2.png"
 import HeroImage3 from "../assets/hero-image3.png"
-import HeroImage4 from "../assets/hero-image4.png"
 
 
 function HeroSlider() {
@@ -21,7 +20,7 @@ function HeroSlider() {
                 <img src={HeroImage3} alt="hero-image3" />
             </div>
             <div>
-                <img src={HeroImage4} alt="hero-image4" />
+                <img src={HeroImage2} alt="hero-image4" />
             </div >  
         </Carousel>
         </div>

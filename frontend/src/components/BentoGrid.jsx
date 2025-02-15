@@ -22,7 +22,7 @@ const BentoGrid = () => {
                 Crafted with precision and purity, each piece is designed to celebrate your 
                 unique style and special moments.
                 </p>
-                <button className="mt-4 w-full sm:w-[60%] md:w-[50%] border border-secondary py-2 px-4 hover:bg-secondary hover:text-gray-50 cursor-pointer">
+                <button className="mt-4 w-full sm:w-[60%] md:w-[50%] border border-secondary py-2 px-4 hover:bg-secondary hover:text-light cursor-pointer">
                     Discover
                 </button>
             </div>

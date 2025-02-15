@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import loginImage from '../assets/login-image3.jpg'
 
 function RegisterPage() {
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
   return (
     <div className='mt-10 md:mt-16 w-full flex items-center justify-center h-screen'>
     <div className="bg-gray-50 flex justify-center items-center w-full">

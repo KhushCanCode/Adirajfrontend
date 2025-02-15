@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Heart, Minus, Plus, Share2, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import RingSlider from '../components/RingSlider';
@@ -6,6 +6,11 @@ import RingSlider from '../components/RingSlider';
 const sizes = ['6', '7', '8', '9', '10'];
 
 function ItemPage() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
     const [selectedSize, setSelectedSize] = useState(sizes[0]);
     const [quantity, setQuantity] = useState(1);
     const [isWishlisted, setIsWishlisted] = useState(false);

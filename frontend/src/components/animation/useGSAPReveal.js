@@ -12,13 +12,13 @@ const useGsapReveal = () => {
       const animationType = el.getAttribute("data-animation") || "fade-up";
 
       let settings = {
-        "fade-up": { opacity: 0, y: 80, ease: "power3.out" },
-        "fade-down": { opacity: 0, y: -80, ease: "power3.out" },
-        "fade-left": { opacity: 0, x: -80, ease: "sine.out" },
-        "fade-right": { opacity: 0, x: 80, ease: "power3.out" },
-        "zoom-in": { opacity: 0, scale: 0.8, ease: "power3.out" },
-        "zoom-out": { opacity: 0, scale: 1.2, ease: "power3.out" },
-        "rotate": { opacity: 0, rotate: -10, ease: "power3.out" },
+        "fade-up": { opacity: 0, y: 80 },
+        "fade-down": { opacity: 0, y: -80 },
+        "fade-left": { opacity: 0, x: -80 },
+        "fade-right": { opacity: 0, x: 80 },
+        "zoom-in": { opacity: 0, scale: 0.8 },
+        "zoom-out": { opacity: 0, scale: 1.2 },
+        "rotate": { opacity: 0, rotate: -10 },
       };
 
       const animation = settings[animationType] || settings["fade-up"];
@@ -31,14 +31,15 @@ const useGsapReveal = () => {
         y: 0,
         scale: 1,
         rotate: 0,
-        duration: 1.2,
-        delay: index * 0.5,
-        ease: animation.ease,
+        duration: 1.5, // Increase duration for smooth effect
+        ease: "power2.out",
+        stagger: 0.2, // Slight delay between elements
         scrollTrigger: {
           trigger: el,
-          start: "top 50%",
-          end: "top 80%",
-          scrub: 2,
+          start: "top 80%", // Start when element is 80% visible
+          end: "top 50%",
+          scrub: true, // Makes animation smoother
+          toggleActions: "play none none reverse", // Smooth fade-out
         },
       });
     });
@@ -50,4 +51,3 @@ const useGsapReveal = () => {
 };
 
 export default useGsapReveal;
-
